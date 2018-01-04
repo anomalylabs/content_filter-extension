@@ -1,5 +1,5 @@
 {
-    "name": "content_filter-extension",
+    "name": "anomaly/content_filter-extension",
     "type": "streams-addon",
     "description": "A basic content filter for the comments module.",
     "keywords": [
