@@ -1,0 +1,38 @@
+{
+    "name": "content_filter-extension",
+    "type": "streams-addon",
+    "description": "A basic content filter for the comments module.",
+    "keywords": [
+        "streams extension",
+        "streams addon",
+        "comment moderator"
+    ],
+    "homepage": "http://pyrocms.com/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "PyroCMS, Inc.",
+            "email": "support@pyrocms.com",
+            "homepage": "http://pyrocms.com/",
+            "role": "Owner"
+        },
+        {
+            "name": "Ryan Thompson",
+            "email": "ryan@pyrocms.com",
+            "homepage": "http://ryanthepyro.com/",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "support@pyrocms.com"
+    },
+    "require": {
+        "anomaly/comments-module": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Anomaly\\ContentFilterExtension\\": "src/"
+        }
+    }
+}
+
