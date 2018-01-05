@@ -65,7 +65,7 @@ class ValidateForm
             // Invalidate the form.
             $this->builder->setSave(false);
 
-            $messages->error('anomaly.extension.content_filter::message.blacklist_error');
+            $this->builder->addFormError('content', 'anomaly.extension.content_filter::message.blacklist_error');
         }
     }
 }
