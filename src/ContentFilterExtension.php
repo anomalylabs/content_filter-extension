@@ -1,6 +1,8 @@
 <?php namespace Anomaly\ContentFilterExtension;
 
 use Anomaly\CommentsModule\Comment\Filter\FilterExtension;
+use Anomaly\CommentsModule\Comment\Form\CommentFormBuilder;
+use Anomaly\ContentFilterExtension\Command\ValidateForm;
 
 /**
  * Class ContentFilterExtension
@@ -19,5 +21,15 @@ class ContentFilterExtension extends FilterExtension
      * @var string
      */
     protected $provides = 'anomaly.module.comments::filter.content';
+
+    /**
+     * Validate the comment form builder.
+     *
+     * @param CommentFormBuilder $builder
+     */
+    public function validate(CommentFormBuilder $builder)
+    {
+        $this->dispatch(new ValidateForm($builder));
+    }
 
 }
