@@ -33,6 +33,14 @@ class ValidateForm
         $this->builder = $builder;
     }
 
+    /**
+     * Handle the command.
+     *
+     * @param Request            $request
+     * @param MessageBag         $messages
+     * @param WatchlistValidator $watchlist
+     * @param BlacklistValidator $blacklist
+     */
     public function handle(
         Request $request,
         MessageBag $messages,
@@ -49,7 +57,7 @@ class ValidateForm
         $input = compact('website', 'content', 'email', 'name', 'ip');
 
         if (!$watchlist->passes($input)) {
-            $this->builder->setFormEntryAttribute('approved', false);
+            $this->builder->setFormEntryAttribute('flagged', true);
         }
 
         if (!$blacklist->passes($input)) {
