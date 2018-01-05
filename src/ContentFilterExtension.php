@@ -1,6 +1,6 @@
 <?php namespace Anomaly\ContentFilterExtension;
 
-use Anomaly\Streams\Platform\Addon\Extension\Extension;
+use Anomaly\CommentsModule\Comment\Filter\FilterExtension;
 
 /**
  * Class ContentFilterExtension
@@ -9,7 +9,7 @@ use Anomaly\Streams\Platform\Addon\Extension\Extension;
  * @author PyroCMS, Inc. <support@pyrocms.com>
  * @author Ryan Thompson <ryan@pyrocms.com>
  */
-class ContentFilterExtension extends Extension
+class ContentFilterExtension extends FilterExtension
 {
 
     /**
